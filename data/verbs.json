@@ -1,0 +1,146 @@
+[
+  {
+    "base": "ask",
+    "past": "asked",
+    "future": "will ask",
+    "spanish": "preguntar",
+    "object": "a question",
+    "image": "assets/images/ask.png",
+    "audio": "assets/audio/ask.mp3"
+  },
+  {
+    "base": "answer",
+    "past": "answered",
+    "future": "will answer",
+    "spanish": "responder",
+    "object": "the question",
+    "image": "assets/images/answer.png",
+    "audio": "assets/audio/answer.mp3"
+  },
+  {
+    "base": "dance",
+    "past": "danced",
+    "future": "will dance",
+    "spanish": "bailar",
+    "object": "at the party",
+    "image": "assets/images/dance.png",
+    "audio": "assets/audio/dance.mp3"
+  },
+  {
+    "base": "eat",
+    "past": "ate",
+    "future": "will eat",
+    "spanish": "comer",
+    "object": "pizza",
+    "image": "assets/images/eat.png",
+    "audio": "assets/audio/eat.mp3"
+  },
+  {
+    "base": "learn",
+    "past": "learned",
+    "future": "will learn",
+    "spanish": "aprender",
+    "object": "English",
+    "image": "assets/images/learn.png",
+    "audio": "assets/audio/learn.mp3"
+  },
+  {
+    "base": "listen",
+    "past": "listened",
+    "future": "will listen",
+    "spanish": "escuchar",
+    "object": "music",
+    "image": "assets/images/listen.png",
+    "audio": "assets/audio/listen.mp3"
+  },
+  {
+    "base": "play",
+    "past": "played",
+    "future": "will play",
+    "spanish": "jugar",
+    "object": "soccer",
+    "image": "assets/images/play.png",
+    "audio": "assets/audio/play.mp3"
+  },
+  {
+    "base": "practice",
+    "past": "practiced",
+    "future": "will practice",
+    "spanish": "practicar",
+    "object": "English",
+    "image": "assets/images/practice.png",
+    "audio": "assets/audio/practice.mp3"
+  },
+  {
+    "base": "read",
+    "past": "read",
+    "future": "will read",
+    "spanish": "leer",
+    "object": "a book",
+    "image": "assets/images/read.png",
+    "audio": "assets/audio/read.mp3"
+  },
+  {
+    "base": "run",
+    "past": "ran",
+    "future": "will run",
+    "spanish": "correr",
+    "object": "in the park",
+    "image": "assets/images/run.png",
+    "audio": "assets/audio/run.mp3"
+  },
+  {
+    "base": "sing",
+    "past": "sang",
+    "future": "will sing",
+    "spanish": "cantar",
+    "object": "a song",
+    "image": "assets/images/sing.png",
+    "audio": "assets/audio/sing.mp3"
+  },
+  {
+    "base": "sleep",
+    "past": "slept",
+    "future": "will sleep",
+    "spanish": "dormir",
+    "object": "early",
+    "image": "assets/images/sleep.png",
+    "audio": "assets/audio/sleep.mp3"
+  },
+  {
+    "base": "speak",
+    "past": "spoke",
+    "future": "will speak",
+    "spanish": "hablar",
+    "object": "English",
+    "image": "assets/images/speak.png",
+    "audio": "assets/audio/speak.mp3"
+  },
+  {
+    "base": "talk",
+    "past": "talked",
+    "future": "will talk",
+    "spanish": "conversar",
+    "object": "with friends",
+    "image": "assets/images/talk.png",
+    "audio": "assets/audio/talk.mp3"
+  },
+  {
+    "base": "teach",
+    "past": "taught",
+    "future": "will teach",
+    "spanish": "enseñar",
+    "object": "students",
+    "image": "assets/images/teach.png",
+    "audio": "assets/audio/teach.mp3"
+  },
+  {
+    "base": "write",
+    "past": "wrote",
+    "future": "will write",
+    "spanish": "escribir",
+    "object": "a letter",
+    "image": "assets/images/write.png",
+    "audio": "assets/audio/write.mp3"
+  }
+]

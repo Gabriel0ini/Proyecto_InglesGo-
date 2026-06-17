@@ -1,0 +1,2 @@
+Aquí puedes colocar archivos mp3 de pronunciación si decides usar audio grabado.
+La app actual usa pyttsx3 para pronunciar el verbo sin necesitar mp3.

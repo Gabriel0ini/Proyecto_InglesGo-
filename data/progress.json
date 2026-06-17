@@ -1,0 +1,46 @@
+{
+  "correct": 26,
+  "incorrect": 4,
+  "verbs": {
+    "write": {
+      "correct": 0,
+      "incorrect": 1,
+      "mastered": false
+    },
+    "drink": {
+      "correct": 1,
+      "incorrect": 0,
+      "mastered": false
+    },
+    "ask": {
+      "correct": 6,
+      "incorrect": 1,
+      "mastered": true
+    },
+    "answer": {
+      "correct": 6,
+      "incorrect": 1,
+      "mastered": true
+    },
+    "dance": {
+      "correct": 4,
+      "incorrect": 0,
+      "mastered": true
+    },
+    "eat": {
+      "correct": 4,
+      "incorrect": 0,
+      "mastered": true
+    },
+    "learn": {
+      "correct": 3,
+      "incorrect": 0,
+      "mastered": true
+    },
+    "listen": {
+      "correct": 2,
+      "incorrect": 1,
+      "mastered": false
+    }
+  }
+}
