@@ -1,46 +1,77 @@
 {
-  "correct": 26,
-  "incorrect": 4,
+  "correct": 5,
+  "incorrect": 1,
   "verbs": {
-    "write": {
-      "correct": 0,
-      "incorrect": 1,
-      "mastered": false
-    },
-    "drink": {
+    "dance": {
       "correct": 1,
       "incorrect": 0,
       "mastered": false
     },
-    "ask": {
-      "correct": 6,
-      "incorrect": 1,
-      "mastered": true
-    },
-    "answer": {
-      "correct": 6,
-      "incorrect": 1,
-      "mastered": true
-    },
-    "dance": {
-      "correct": 4,
-      "incorrect": 0,
-      "mastered": true
-    },
     "eat": {
-      "correct": 4,
+      "correct": 2,
       "incorrect": 0,
-      "mastered": true
+      "mastered": false
     },
     "learn": {
-      "correct": 3,
-      "incorrect": 0,
-      "mastered": true
-    },
-    "listen": {
-      "correct": 2,
+      "correct": 0,
       "incorrect": 1,
       "mastered": false
+    },
+    "listen": {
+      "correct": 1,
+      "incorrect": 0,
+      "mastered": false
+    },
+    "play": {
+      "correct": 1,
+      "incorrect": 0,
+      "mastered": false
+    }
+  },
+  "1": {
+    "puntaje": 50,
+    "ejercicios_completados": 5,
+    "verbos": {
+      "practice": {
+        "correcto": 0,
+        "incorrecto": 1,
+        "dominado": false
+      },
+      "sing": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "speak": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "ask": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "read": {
+        "correcto": 1,
+        "incorrecto": 1,
+        "dominado": false
+      },
+      "answer": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "learn": {
+        "correcto": 0,
+        "incorrecto": 2,
+        "dominado": false
+      },
+      "talk": {
+        "correcto": 0,
+        "incorrecto": 1,
+        "dominado": false
+      }
     }
   }
 }

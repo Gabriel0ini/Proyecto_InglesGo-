@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # Proyecto_InglesGo-
-=======
 # Aprendiendo Inglés con Flash Cards
 
 Aplicación de escritorio para Taller de Programación.
@@ -94,4 +92,3 @@ dist/main.exe
 ## Importante para la entrega
 
 Las imágenes actuales son de ejemplo. Para la entrega final se recomienda reemplazarlas por imágenes reales de acciones.
->>>>>>> cbbb7ed (Subiendo app inicial)

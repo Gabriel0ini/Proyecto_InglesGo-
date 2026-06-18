@@ -1,3 +1,4 @@
 Pillow
 pyttsx3
 pyinstaller
+pygame
