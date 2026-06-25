@@ -27,15 +27,15 @@ class Leccion:
             grupos.setdefault(u, []).append(p)
 
         meta = {
-            1: ("Los verbos",  "Aprende verbos en presente, pasado y futuro"),
-            2: ("Saludos",     "Aprende a decir Hello, Goodbye y más"),
-            3: ("Colores",     "Identifica los colores en inglés"),
-            4: ("Acciones",    "Verbos de acción cotidiana"),
+            1: ("Verbs", "Learn verbs in present, past and future tense"),
+            2: ("Greetings", "Learn to say Hello, Goodbye and more"),
+            3: ("Colors", "Identify colors in English"),
+            4: ("Actions", "Everyday action verbs"),
         }
 
         lecciones = []
         for unidad_num, palabras in sorted(grupos.items()):
-            titulo, desc = meta.get(unidad_num, (f"Unidad {unidad_num}", ""))
+            titulo, desc = meta.get(unidad_num, (f"Unit {unidad_num}", ""))
             lecciones.append(Leccion(
                 id=unidad_num,
                 titulo=titulo,
