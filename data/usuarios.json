@@ -7,5 +7,14 @@
     "xp": 55,
     "racha": 0,
     "nivel": 1
+  },
+  {
+    "id": 2,
+    "nombre": "roberth",
+    "email": "roberth@gmail.com",
+    "password": "6ca13d52ca70c883e0f0bb101e425a89e8624de51db2d2392593af6a84118090",
+    "xp": 0,
+    "racha": 0,
+    "nivel": 1
   }
 ]
