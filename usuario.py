@@ -25,21 +25,21 @@ class Usuario:
     @staticmethod
     def crear_cuenta(nombre: str, email: str, password: str) -> "tuple[bool, str]":
         """
-        Registra un nuevo usuario.
-        Retorna (True, mensaje) si OK, (False, error) si falla.
+        Registers a new user.
+        Returns (True, message) if OK, (False, error) if fails.
         """
         if not nombre or not email or not password:
-            return False, "Todos los campos son obligatorios."
+            return False, "All fields are required."
         if "@" not in email:
-            return False, "El email no es válido."
+            return False, "Invalid email format."
         if len(password) < 4:
-            return False, "La contraseña debe tener al menos 4 caracteres."
+            return False, "Password must be at least 4 characters."
 
         usuarios = load_json(USUARIOS_FILE, [])
 
         for u in usuarios:
             if u["email"].lower() == email.lower():
-                return False, "Ya existe una cuenta con ese email."
+                return False, "An account with this email already exists."
 
         nuevo_id = max((u["id"] for u in usuarios), default=0) + 1
         nuevo = {
@@ -53,7 +53,7 @@ class Usuario:
         }
         usuarios.append(nuevo)
         save_json(USUARIOS_FILE, usuarios)
-        return True, "Cuenta creada correctamente."
+        return True, "Account created successfully."
 
     # ----------------------------------------------------------
     def agregar_xp(self, cantidad: int):
@@ -80,4 +80,3 @@ class Usuario:
             "racha": self.racha,
             "nivel": self.nivel,
         }
-
