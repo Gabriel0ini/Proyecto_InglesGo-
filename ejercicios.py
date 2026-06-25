@@ -65,25 +65,40 @@ class EjercicioSeleccion:
 # =============================================================
 # CLASE: EjercicioOracion
 # Constructor de oraciones con palabras disponibles
+# Soporta los 3 tiempos verbales: present, past, future
 # =============================================================
 
 class EjercicioOracion:
     HINTS_MAX = 3
 
-    def __init__(self, palabras: list[Palabra]):
-        self._palabras          = palabras
-        self.palabra: Palabra   = None
+    def __init__(self, palabras: list[Palabra], tiempo: str = "present"):
+        self._palabras           = palabras
+        self.tiempo               = tiempo  # "present" | "past" | "future"
+        self.palabra: Palabra     = None
+        self.sujeto: str          = ""
         self.palabras_disponibles: list[str] = []
         self.oracion_correcta: str = ""
-        self._pistas_restantes  = self.HINTS_MAX
+        self._pistas_restantes    = self.HINTS_MAX
         self.nueva_oracion()
 
     # ----------------------------------------------------------
+    def set_tiempo(self, tiempo: str):
+        """Cambia el tiempo verbal activo (present/past/future) y genera una nueva oración."""
+        self.tiempo = tiempo
+        self.nueva_oracion()
+
     def nueva_oracion(self):
         self.palabra = random.choice(self._palabras)
-        sujeto = "I"
-        obj    = self.palabra.objeto
-        self.oracion_correcta = f"{sujeto} {self.palabra.infinitivo} {obj}"
+        fila = random.choice(self.palabra.oraciones) if self.palabra.oraciones else None
+
+        if fila:
+            self.sujeto = fila.get("subject", "I")
+            frase = fila.get(self.tiempo, "")
+            self.oracion_correcta = f"{self.sujeto} {frase}".strip()
+        else:
+            # Compatibilidad si una palabra no trae 'sentences'
+            self.sujeto = "I"
+            self.oracion_correcta = f"I {self.palabra.infinitivo} {self.palabra.objeto}"
 
         palabras_correctas = self.oracion_correcta.split()
         distractores = [

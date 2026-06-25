@@ -29,8 +29,8 @@
     }
   },
   "1": {
-    "puntaje": 50,
-    "ejercicios_completados": 5,
+    "puntaje": 90,
+    "ejercicios_completados": 9,
     "verbos": {
       "practice": {
         "correcto": 0,
@@ -49,7 +49,7 @@
       },
       "ask": {
         "correcto": 1,
-        "incorrecto": 0,
+        "incorrecto": 1,
         "dominado": false
       },
       "read": {
@@ -59,7 +59,7 @@
       },
       "answer": {
         "correcto": 1,
-        "incorrecto": 0,
+        "incorrecto": 1,
         "dominado": false
       },
       "learn": {
@@ -70,6 +70,26 @@
       "talk": {
         "correcto": 0,
         "incorrecto": 1,
+        "dominado": false
+      },
+      "teach": {
+        "correcto": 1,
+        "incorrecto": 1,
+        "dominado": false
+      },
+      "write": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "play": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "run": {
+        "correcto": 1,
+        "incorrecto": 0,
         "dominado": false
       }
     }

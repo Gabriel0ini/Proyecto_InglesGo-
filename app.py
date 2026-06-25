@@ -16,8 +16,9 @@ class InglesGoApp(tk.Tk):
         super().__init__()
         self.title("InglesGo")
         self.geometry("980x650")
+        self.minsize(980, 650)
         self.configure(bg=BG)
-        self.resizable(False, False)
+        self.resizable(True, True)
 
         self.usuario_actual: Usuario | None = None
         self.progreso: Progreso | None = None
@@ -177,9 +178,9 @@ class InglesGoApp(tk.Tk):
 
         self.lbl(f"Overall Progress: {pct}%", 14, color=GRAY).pack(pady=(15, 5))
 
-        canvas = tk.Canvas(self.container, width=600, height=20, bg="#DDE7FF", highlightthickness=0)
-        canvas.pack()
-        canvas.create_rectangle(0, 0, int(600 * pct / 100), 20, fill=SUCCESS, outline="")
+        canvas = tk.Canvas(self.container, height=20, bg="#DDE7FF", highlightthickness=0)
+        canvas.pack(fill="x", padx=60)
+        self._draw_progress_bar(canvas, pct, height=20, color=SUCCESS)
 
         self.lbl("Available Lessons", 16, bold=True).pack(pady=(20, 5))
 
@@ -262,10 +263,9 @@ class InglesGoApp(tk.Tk):
         self.lbl(f"{actual} / {total} words", 12, color=GRAY).pack()
 
         # Progress bar
-        canvas_bar = tk.Canvas(self.container, width=700, height=8, bg="#DDE7FF", highlightthickness=0)
-        canvas_bar.pack(pady=6)
-        ancho = int(700 * actual / total)
-        canvas_bar.create_rectangle(0, 0, ancho, 8, fill=PRIMARY, outline="")
+        canvas_bar = tk.Canvas(self.container, height=8, bg="#DDE7FF", highlightthickness=0)
+        canvas_bar.pack(fill="x", padx=60, pady=6)
+        self._draw_progress_bar(canvas_bar, int(100 * actual / total), height=8, color=PRIMARY)
 
         # Card
         card = tk.Frame(self.container, bg="white", padx=30, pady=20)
@@ -273,29 +273,24 @@ class InglesGoApp(tk.Tk):
 
         if not es_reverso:
             # FRONT
-            tk.Label(card, text="ENGLISH VERB — tap to flip",
-                     font=("Arial", 11), bg="white", fg=GRAY).pack()
-            tk.Label(card, text=palabra.infinitivo,
-                     font=("Arial", 36, "bold"), fg=PRIMARY, bg="white").pack(pady=8)
-            tk.Label(card, text=f"/{palabra.audio_url}/",
-                     font=("Arial", 13), fg=GRAY, bg="white").pack()
+            row = tk.Frame(card, bg="white")
+            row.pack(pady=10, fill="x")
+            self._cargar_imagen(row, palabra, size=(220, 170), centered=True)
+            tk.Label(card, text="Tap to flip", font=("Arial", 12), bg="white", fg=GRAY).pack(pady=(8, 0))
         else:
             # REVERSE
-            row = tk.Frame(card, bg="white")
-            row.pack(fill="x")
-            self._cargar_imagen(row, palabra)
-            info = tk.Frame(row, bg="white")
-            info.pack(side="left", padx=16)
+            info = tk.Frame(card, bg="white")
+            info.pack(pady=10)
             tk.Label(info, text=palabra.infinitivo,
-                     font=("Arial", 28, "bold"), fg=PRIMARY, bg="white").pack(anchor="w")
+                     font=("Arial", 36, "bold"), fg=PRIMARY, bg="white").pack(pady=(0, 10))
             tk.Label(info, text=palabra.traduccion,
-                     font=("Arial", 18, "bold"), fg=TEXT, bg="white").pack(anchor="w")
+                     font=("Arial", 24, "bold"), fg=TEXT, bg="white").pack(pady=(0, 10))
             tk.Label(info, text=f"Present: {palabra.presente}  |  Past: {palabra.pasado}  |  Future: {palabra.futuro}",
-                     font=("Arial", 11), fg=GRAY, bg="white").pack(anchor="w", pady=4)
+                     font=("Arial", 13), fg=GRAY, bg="white").pack(pady=(0, 12))
             tk.Button(info, text="🔊 Listen",
                       command=lambda: self._reproducir_audio(palabra),
                       font=("Arial", 12, "bold"), bg=SECONDARY, fg="white",
-                      relief="flat", cursor="hand2", padx=10, pady=4).pack(anchor="w", pady=4)
+                      relief="flat", cursor="hand2", padx=10, pady=4).pack()
 
         tk.Button(card, text="🔄 Flip Card",
                   command=lambda: [fc.voltear(), self._render_flashcard()],
@@ -319,14 +314,20 @@ class InglesGoApp(tk.Tk):
         self.btn("← Back to Selector", lambda: self.show_selector_modo(self.leccion_actual),
                  color=GRAY, width=22).pack(pady=4)
 
-    def _cargar_imagen(self, parent, palabra: Palabra):
+    def _cargar_imagen(self, parent, palabra: Palabra, size: tuple = (160, 120), centered: bool = False):
         path = BASE_DIR / palabra.imagen_url
         try:
-            img = Image.open(path).resize((160, 120))
+            img = Image.open(path).resize(size)
             self._imagen_actual = ImageTk.PhotoImage(img)
-            tk.Label(parent, image=self._imagen_actual, bg="white").pack(side="left")
+            if centered:
+                tk.Label(parent, image=self._imagen_actual, bg="white").pack(pady=0)
+            else:
+                tk.Label(parent, image=self._imagen_actual, bg="white").pack(side="left")
         except Exception:
-            tk.Label(parent, text="[imagen]", font=("Arial", 12), fg=GRAY, bg="white").pack(side="left")
+            if centered:
+                tk.Label(parent, text="[imagen]", font=("Arial", 12), fg=GRAY, bg="white").pack(pady=0)
+            else:
+                tk.Label(parent, text="[imagen]", font=("Arial", 12), fg=GRAY, bg="white").pack(side="left")
 
     def _reproducir_audio(self, palabra: Palabra):
         try:
@@ -337,6 +338,17 @@ class InglesGoApp(tk.Tk):
             engine.runAndWait()
         except Exception as e:
             messagebox.showinfo("Audio", f"Could not play audio:\n{e}")
+
+    def _draw_progress_bar(self, canvas: tk.Canvas, percent: int, height: int = 20, color: str = PRIMARY, show_text: bool = False):
+        canvas.update_idletasks()
+        width = canvas.winfo_width() or canvas.winfo_reqwidth()
+        if width <= 0:
+            width = 600
+        fill_width = int(width * max(0, min(percent, 100)) / 100)
+        canvas.create_rectangle(0, 0, width, height, fill="#DDE7FF", outline="")
+        canvas.create_rectangle(0, 0, fill_width, height, fill=color, outline="")
+        if show_text:
+            canvas.create_text(width // 2, height // 2, text=f"{percent}%", fill=TEXT, font=("Arial", 11, "bold"))
 
     # =========================================================
     # SCREEN: Multiple Choice Exercise
@@ -363,17 +375,11 @@ class InglesGoApp(tk.Tk):
         card.pack(pady=15, padx=80, fill="x")
 
         row = tk.Frame(card, bg="white")
-        row.pack()
-        self._cargar_imagen(row, palabra)
-
-        info = tk.Frame(row, bg="white")
-        info.pack(side="left", padx=16)
-        tk.Label(info, text=palabra.traduccion,
-                 font=("Arial", 26, "bold"), fg=PRIMARY, bg="white").pack(anchor="w")
-        tk.Label(info, text="Pick the English translation",
-                 font=("Arial", 12), fg=GRAY, bg="white").pack(anchor="w")
-        tk.Button(info, text="🔊", command=lambda: self._reproducir_audio(palabra),
-                  font=("Arial", 14), bg="white", relief="flat", cursor="hand2").pack(anchor="w")
+        row.pack(pady=10, fill="x")
+        self._cargar_imagen(row, palabra, size=(220, 170), centered=True)
+        tk.Button(row, text="🔊", command=lambda: self._reproducir_audio(palabra),
+                  font=("Arial", 14), bg=SECONDARY, fg="white",
+                  relief="flat", cursor="hand2", padx=16, pady=8).pack(pady=(10, 0))
 
         # Options
         feedback_lbl = tk.Label(self.container, text="", font=("Arial", 14, "bold"), bg=BG)
@@ -421,7 +427,7 @@ class InglesGoApp(tk.Tk):
         if not palabras:
             messagebox.showerror("Error", "No words in this lesson.")
             return
-        self._oracion = EjercicioOracion(palabras)
+        self._oracion = EjercicioOracion(palabras, tiempo="present")
         self._palabras_seleccionadas = []
         self._render_oracion()
 
@@ -433,15 +439,38 @@ class InglesGoApp(tk.Tk):
         self.lbl("Build the Sentence in English", 20, bold=True, color=PRIMARY).pack(pady=(20, 2))
         self.lbl(f"Unit {self.leccion_actual.unidad}: {self.leccion_actual.titulo}", 12, color=GRAY).pack()
 
-        # Image + Spanish phrase
-        top = tk.Frame(self.container, bg=BG)
-        top.pack(pady=10)
-        self._cargar_imagen(top, palabra)
+        # ---------------------------------------------------
+        # Tabs: Present | Past | Future
+        # ---------------------------------------------------
+        TIEMPOS = [("present", "Present"), ("past", "Past"), ("future", "Future")]
 
-        right = tk.Frame(top, bg=BG)
-        right.pack(side="left", padx=20)
-        tk.Label(right, text=f"{palabra.traduccion}", font=("Arial", 22, "bold"), fg=PRIMARY, bg=BG).pack(anchor="w")
-        tk.Label(right, text="Build the sentence in English:", font=("Arial", 13), fg=GRAY, bg=BG).pack(anchor="w")
+        tabs_frame = tk.Frame(self.container, bg=BG)
+        tabs_frame.pack(pady=(14, 4))
+
+        def cambiar_tiempo(tiempo):
+            if tiempo == ej.tiempo:
+                return
+            ej.set_tiempo(tiempo)
+            self._palabras_seleccionadas = []
+            self._render_oracion()
+
+        for clave, etiqueta in TIEMPOS:
+            activo = (clave == ej.tiempo)
+            tab_btn = tk.Button(
+                tabs_frame, text=etiqueta,
+                font=("Arial", 13, "bold"),
+                bg=PRIMARY if activo else "white",
+                fg="white" if activo else PRIMARY,
+                relief="flat", bd=1, cursor="hand2",
+                padx=22, pady=8,
+                command=lambda t=clave: cambiar_tiempo(t)
+            )
+            tab_btn.pack(side="left", padx=4)
+
+        # Image only, centered
+        top = tk.Frame(self.container, bg=BG)
+        top.pack(pady=10, fill="x")
+        self._cargar_imagen(top, palabra, size=(220, 170), centered=True)
 
         # Answer zone
         respuesta_lbl = tk.Label(self.container,
@@ -557,10 +586,9 @@ class InglesGoApp(tk.Tk):
             tk.Label(col, text=str(val), font=("Arial", 20, "bold"), bg="white", fg=TEXT).pack()
 
         self.lbl(f"Overall Progress: {pct}%", 15).pack(pady=(18, 4))
-        c = tk.Canvas(self.container, width=600, height=22, bg="#DDE7FF", highlightthickness=0)
-        c.pack()
-        c.create_rectangle(0, 0, int(600 * pct / 100), 22, fill=SUCCESS, outline="")
-        c.create_text(300, 11, text=f"{pct}%", fill=TEXT, font=("Arial", 11, "bold"))
+        c = tk.Canvas(self.container, height=22, bg="#DDE7FF", highlightthickness=0)
+        c.pack(fill="x", padx=60)
+        self._draw_progress_bar(c, pct, height=22, color=SUCCESS, show_text=True)
 
         # By lesson
         self.lbl("Progress by Unit", 15, bold=True).pack(pady=(16, 4))

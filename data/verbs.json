@@ -1,146 +1,802 @@
 [
   {
-    "base": "ask",
-    "past": "asked",
-    "future": "will ask",
-    "spanish": "preguntar",
-    "object": "a question",
-    "image": "assets/images/ask.png",
-    "audio": "assets/audio/ask.mp3"
-  },
-  {
-    "base": "answer",
-    "past": "answered",
-    "future": "will answer",
-    "spanish": "responder",
-    "object": "the question",
-    "image": "assets/images/answer.png",
-    "audio": "assets/audio/answer.mp3"
-  },
-  {
-    "base": "dance",
-    "past": "danced",
-    "future": "will dance",
-    "spanish": "bailar",
-    "object": "at the party",
-    "image": "assets/images/dance.png",
-    "audio": "assets/audio/dance.mp3"
+    "base": "play",
+    "spanish": "jugar",
+    "image": "assets/images/play.png",
+    "audio": "assets/audio/play.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "play video games at home",
+        "past": "played soccer in the park",
+        "future": "will play basketball at school"
+      },
+      {
+        "subject": "You",
+        "present": "play volleyball on the beach",
+        "past": "played tennis at the stadium",
+        "future": "will play baseball in the gym"
+      },
+      {
+        "subject": "He",
+        "present": "plays hockey in the arena",
+        "past": "played golf at the club",
+        "future": "will play rugby on the field"
+      },
+      {
+        "subject": "She",
+        "present": "plays chess in the library",
+        "past": "played badminton in the yard",
+        "future": "will play handball at the sports center"
+      },
+      {
+        "subject": "It",
+        "present": "plays cartoons on the tablet",
+        "past": "played music in the living room",
+        "future": "will play movies in the cinema"
+      },
+      {
+        "subject": "We",
+        "present": "play ping-pong in the basement",
+        "past": "played dodgeball at the camp",
+        "future": "will play football in the university"
+      },
+      {
+        "subject": "They",
+        "present": "play checkers in the classroom",
+        "past": "played marbles on the street",
+        "future": "will play bowling at the mall"
+      }
+    ]
   },
   {
     "base": "eat",
-    "past": "ate",
-    "future": "will eat",
     "spanish": "comer",
-    "object": "pizza",
     "image": "assets/images/eat.png",
-    "audio": "assets/audio/eat.mp3"
-  },
-  {
-    "base": "learn",
-    "past": "learned",
-    "future": "will learn",
-    "spanish": "aprender",
-    "object": "English",
-    "image": "assets/images/learn.png",
-    "audio": "assets/audio/learn.mp3"
-  },
-  {
-    "base": "listen",
-    "past": "listened",
-    "future": "will listen",
-    "spanish": "escuchar",
-    "object": "music",
-    "image": "assets/images/listen.png",
-    "audio": "assets/audio/listen.mp3"
-  },
-  {
-    "base": "play",
-    "past": "played",
-    "future": "will play",
-    "spanish": "jugar",
-    "object": "soccer",
-    "image": "assets/images/play.png",
-    "audio": "assets/audio/play.mp3"
-  },
-  {
-    "base": "practice",
-    "past": "practiced",
-    "future": "will practice",
-    "spanish": "practicar",
-    "object": "English",
-    "image": "assets/images/practice.png",
-    "audio": "assets/audio/practice.mp3"
+    "audio": "assets/audio/eat.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "eat pizza in the kitchen",
+        "past": "ate soup at the restaurant",
+        "future": "will eat tacos in the cafeteria"
+      },
+      {
+        "subject": "You",
+        "present": "eat sandwiches at the park",
+        "past": "ate pasta in the dining room",
+        "future": "will eat noodles at the fair"
+      },
+      {
+        "subject": "He",
+        "present": "eats salad in the office",
+        "past": "ate chicken at the farm",
+        "future": "will eat hamburgers in the food court"
+      },
+      {
+        "subject": "She",
+        "present": "eats cookies in the bakery",
+        "past": "ate fish near the lake",
+        "future": "will eat pancakes at the cafe"
+      },
+      {
+        "subject": "It",
+        "present": "eats meat in the yard",
+        "past": "ate bread beside the tree",
+        "future": "will eat rice in the garden"
+      },
+      {
+        "subject": "We",
+        "present": "eat fruit at the picnic",
+        "past": "ate ice cream on the avenue",
+        "future": "will eat steak at the barbecue"
+      },
+      {
+        "subject": "They",
+        "present": "eat eggs in the classroom",
+        "past": "ate cheese at the station",
+        "future": "will eat burritos in the stadium"
+      }
+    ]
   },
   {
     "base": "read",
-    "past": "read",
-    "future": "will read",
     "spanish": "leer",
-    "object": "a book",
     "image": "assets/images/read.png",
-    "audio": "assets/audio/read.mp3"
-  },
-  {
-    "base": "run",
-    "past": "ran",
-    "future": "will run",
-    "spanish": "correr",
-    "object": "in the park",
-    "image": "assets/images/run.png",
-    "audio": "assets/audio/run.mp3"
+    "audio": "assets/audio/read.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "read comics in the bedroom",
+        "past": "read a mystery book at the library",
+        "future": "will read magazines in the airport"
+      },
+      {
+        "subject": "You",
+        "present": "read newspapers in the garden",
+        "past": "read a science book at the museum",
+        "future": "will read stories on the balcony"
+      },
+      {
+        "subject": "He",
+        "present": "reads maps in the office",
+        "past": "read a novel at the station",
+        "future": "will read poems in the theater"
+      },
+      {
+        "subject": "She",
+        "present": "reads recipes in the kitchen",
+        "past": "read a history book beside the river",
+        "future": "will read letters in the living room"
+      },
+      {
+        "subject": "It",
+        "present": "reads instructions on the computer",
+        "past": "read messages in the laboratory",
+        "future": "will read documents in the studio"
+      },
+      {
+        "subject": "We",
+        "present": "read articles in the studio",
+        "past": "read a fantasy book at the campsite",
+        "future": "will read biographies in the palace"
+      },
+      {
+        "subject": "They",
+        "present": "read menus in the tower garden",
+        "past": "read a comic book at the train station",
+        "future": "will read dictionaries in the aquarium hall"
+      }
+    ]
   },
   {
     "base": "sing",
-    "past": "sang",
-    "future": "will sing",
     "spanish": "cantar",
-    "object": "a song",
     "image": "assets/images/sing.png",
-    "audio": "assets/audio/sing.mp3"
-  },
-  {
-    "base": "sleep",
-    "past": "slept",
-    "future": "will sleep",
-    "spanish": "dormir",
-    "object": "early",
-    "image": "assets/images/sleep.png",
-    "audio": "assets/audio/sleep.mp3"
-  },
-  {
-    "base": "speak",
-    "past": "spoke",
-    "future": "will speak",
-    "spanish": "hablar",
-    "object": "English",
-    "image": "assets/images/speak.png",
-    "audio": "assets/audio/speak.mp3"
-  },
-  {
-    "base": "talk",
-    "past": "talked",
-    "future": "will talk",
-    "spanish": "conversar",
-    "object": "with friends",
-    "image": "assets/images/talk.png",
-    "audio": "assets/audio/talk.mp3"
-  },
-  {
-    "base": "teach",
-    "past": "taught",
-    "future": "will teach",
-    "spanish": "enseñar",
-    "object": "students",
-    "image": "assets/images/teach.png",
-    "audio": "assets/audio/teach.mp3"
+    "audio": "assets/audio/sing.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "sing pop songs in the bathroom",
+        "past": "sang rock music at the stadium",
+        "future": "will sing jazz in the concert hall"
+      },
+      {
+        "subject": "You",
+        "present": "sing happy songs in the shower",
+        "past": "sang folk music at the festival",
+        "future": "will sing opera in the theater"
+      },
+      {
+        "subject": "He",
+        "present": "sings rap songs in the garage",
+        "past": "sang country music at the ranch",
+        "future": "will sing blues in the club"
+      },
+      {
+        "subject": "She",
+        "present": "sings lullabies in the nursery",
+        "past": "sang classical music at the church",
+        "future": "will sing disco songs in the ballroom"
+      },
+      {
+        "subject": "It",
+        "present": "sings sounds in the jungle",
+        "past": "sang melodies in the forest",
+        "future": "will sing tunes near the waterfall"
+      },
+      {
+        "subject": "We",
+        "present": "sing karaoke songs in the cafe",
+        "past": "sang traditional songs at the campfire",
+        "future": "will sing hip-hop in the auditorium"
+      },
+      {
+        "subject": "They",
+        "present": "sing melodies in the music room",
+        "past": "sang ballads at the competition",
+        "future": "will sing reggae on the cruise ship"
+      }
+    ]
   },
   {
     "base": "write",
-    "past": "wrote",
-    "future": "will write",
     "spanish": "escribir",
-    "object": "a letter",
     "image": "assets/images/write.png",
-    "audio": "assets/audio/write.mp3"
+    "audio": "assets/audio/write.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "write notes in the office",
+        "past": "wrote a poem at the lake",
+        "future": "will write stories in the cabin"
+      },
+      {
+        "subject": "You",
+        "present": "write messages in the hallway",
+        "past": "wrote a letter at the station",
+        "future": "will write essays in the academy"
+      },
+      {
+        "subject": "He",
+        "present": "writes emails in the workshop",
+        "past": "wrote a report at the airport",
+        "future": "will write articles in the newsroom"
+      },
+      {
+        "subject": "She",
+        "present": "writes diaries in the garden",
+        "past": "wrote a postcard at the beach",
+        "future": "will write novels in the library"
+      },
+      {
+        "subject": "It",
+        "present": "writes codes in the laboratory",
+        "past": "wrote symbols in the cave",
+        "future": "will write data in the control room"
+      },
+      {
+        "subject": "We",
+        "present": "write sentences in the classroom",
+        "past": "wrote a script at the theater",
+        "future": "will write journals in the camp"
+      },
+      {
+        "subject": "They",
+        "present": "write paragraphs in the conference room",
+        "past": "wrote a song at the studio",
+        "future": "will write documents in the courthouse"
+      }
+    ]
+  },
+  {
+    "base": "sleep",
+    "spanish": "dormir",
+    "image": "assets/images/sleep.png",
+    "audio": "assets/audio/sleep.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "sleep in the hammock",
+        "past": "slept at the mountain lodge",
+        "future": "will sleep in the tent"
+      },
+      {
+        "subject": "You",
+        "present": "sleep on the sofa",
+        "past": "slept at the hotel",
+        "future": "will sleep in the treehouse"
+      },
+      {
+        "subject": "He",
+        "present": "sleeps in the cabin",
+        "past": "slept at the farmhouse",
+        "future": "will sleep in the hostel"
+      },
+      {
+        "subject": "She",
+        "present": "sleeps in the bedroom",
+        "past": "slept at the resort",
+        "future": "will sleep in the apartment"
+      },
+      {
+        "subject": "It",
+        "present": "sleeps under the table",
+        "past": "slept near the fireplace",
+        "future": "will sleep beside the window"
+      },
+      {
+        "subject": "We",
+        "present": "sleep in the dormitory",
+        "past": "slept at the campsite",
+        "future": "will sleep in the chalet"
+      },
+      {
+        "subject": "They",
+        "present": "sleep in the attic",
+        "past": "slept at the village house",
+        "future": "will sleep in the palace room"
+      }
+    ]
+  },
+  {
+    "base": "run",
+    "spanish": "correr",
+    "image": "assets/images/run.png",
+    "audio": "assets/audio/run.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "run in the stadium",
+        "past": "ran at the riverside",
+        "future": "will run in the marathon park"
+      },
+      {
+        "subject": "You",
+        "present": "run on the track",
+        "past": "ran at the canyon",
+        "future": "will run in the sports field"
+      },
+      {
+        "subject": "He",
+        "present": "runs in the forest trail",
+        "past": "ran at the desert road",
+        "future": "will run in the city square"
+      },
+      {
+        "subject": "She",
+        "present": "runs on the beach shore",
+        "past": "ran at the waterfall path",
+        "future": "will run in the olympic center"
+      },
+      {
+        "subject": "It",
+        "present": "runs around the garden",
+        "past": "ran near the barn",
+        "future": "will run across the meadow"
+      },
+      {
+        "subject": "We",
+        "present": "run in the gymnasium",
+        "past": "ran at the national park",
+        "future": "will run in the university field"
+      },
+      {
+        "subject": "They",
+        "present": "run in the playground",
+        "past": "ran at the countryside road",
+        "future": "will run in the athletics arena"
+      }
+    ]
+  },
+  {
+    "base": "talk",
+    "spanish": "conversar",
+    "image": "assets/images/talk.png",
+    "audio": "assets/audio/talk.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "talk with my cousin in the cafeteria",
+        "past": "talked with a teacher at the museum",
+        "future": "will talk with my friend in the cinema"
+      },
+      {
+        "subject": "You",
+        "present": "talk with your neighbors on the balcony",
+        "past": "talked with the doctor at the clinic",
+        "future": "will talk with your coach in the locker room"
+      },
+      {
+        "subject": "He",
+        "present": "talks with tourists in the plaza",
+        "past": "talked with the manager at the company",
+        "future": "will talk with the singer in the backstage area"
+      },
+      {
+        "subject": "She",
+        "present": "talks with her classmates in the corridor",
+        "past": "talked with the chef at the restaurant",
+        "future": "will talk with the pilot in the airport lounge"
+      },
+      {
+        "subject": "It",
+        "present": "talks to visitors in the information center",
+        "past": "talked to children near the fountain",
+        "future": "will talk to guests in the exhibition hall"
+      },
+      {
+        "subject": "We",
+        "present": "talk with our cousins in the park shelter",
+        "past": "talked with the guide at the monument",
+        "future": "will talk with the audience in the conference hall"
+      },
+      {
+        "subject": "They",
+        "present": "talk with reporters in the press room",
+        "past": "talked with the captain at the harbor",
+        "future": "will talk with the dancers in the rehearsal studio"
+      }
+    ]
+  },
+  {
+    "base": "dance",
+    "spanish": "bailar",
+    "image": "assets/images/dance.png",
+    "audio": "assets/audio/dance.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "dance in the studio",
+        "past": "danced at the carnival",
+        "future": "will dance in the ballroom"
+      },
+      {
+        "subject": "You",
+        "present": "dance at the party hall",
+        "past": "danced at the wedding",
+        "future": "will dance in the nightclub"
+      },
+      {
+        "subject": "He",
+        "present": "dances in the street parade",
+        "past": "danced at the talent show",
+        "future": "will dance in the opera house"
+      },
+      {
+        "subject": "She",
+        "present": "dances in the dance academy",
+        "past": "danced at the festival stage",
+        "future": "will dance in the cultural center"
+      },
+      {
+        "subject": "It",
+        "present": "dances near the speaker",
+        "past": "danced beside the campfire",
+        "future": "will dance around the fountain"
+      },
+      {
+        "subject": "We",
+        "present": "dance in the gym hall",
+        "past": "danced at the school event",
+        "future": "will dance in the community center"
+      },
+      {
+        "subject": "They",
+        "present": "dance in the town square",
+        "past": "danced at the beach concert",
+        "future": "will dance in the celebration hall"
+      }
+    ]
+  },
+  {
+    "base": "listen",
+    "spanish": "escuchar",
+    "image": "assets/images/listen.png",
+    "audio": "assets/audio/listen.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "listen to music in the bedroom",
+        "past": "listened to the radio at the cafe",
+        "future": "will listen to podcasts in the library"
+      },
+      {
+        "subject": "You",
+        "present": "listen to your teacher in the classroom",
+        "past": "listened to the news at the station",
+        "future": "will listen to stories in the auditorium"
+      },
+      {
+        "subject": "He",
+        "present": "listens to jazz in the lounge",
+        "past": "listened to instructions at the workshop",
+        "future": "will listen to interviews in the recording room"
+      },
+      {
+        "subject": "She",
+        "present": "listens to pop songs in the beauty salon",
+        "past": "listened to a speech at the ceremony",
+        "future": "will listen to audiobooks in the reading room"
+      },
+      {
+        "subject": "It",
+        "present": "listens to sounds in the forest",
+        "past": "listened to noises near the river",
+        "future": "will listen to voices in the cave"
+      },
+      {
+        "subject": "We",
+        "present": "listen to our coach in the sports center",
+        "past": "listened to announcements at the terminal",
+        "future": "will listen to concerts in the amphitheater"
+      },
+      {
+        "subject": "They",
+        "present": "listen to music in the subway station",
+        "past": "listened to the band at the fairground",
+        "future": "will listen to debates in the parliament hall"
+      }
+    ]
+  },
+  {
+    "base": "speak",
+    "spanish": "hablar",
+    "image": "assets/images/speak.png",
+    "audio": "assets/audio/speak.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "speak English in the classroom",
+        "past": "spoke with a tourist at the monument",
+        "future": "will speak French in the embassy"
+      },
+      {
+        "subject": "You",
+        "present": "speak Spanish in the office",
+        "past": "spoke with the cashier at the supermarket",
+        "future": "will speak Italian in the language institute"
+      },
+      {
+        "subject": "He",
+        "present": "speaks German in the meeting room",
+        "past": "spoke with the actor at the cinema",
+        "future": "will speak Portuguese in the conference center"
+      },
+      {
+        "subject": "She",
+        "present": "speaks Japanese in the bookstore",
+        "past": "spoke with the nurse at the hospital",
+        "future": "will speak Korean in the university hall"
+      },
+      {
+        "subject": "It",
+        "present": "speaks through the microphone in the robot lab",
+        "past": "spoke near the control panel",
+        "future": "will speak in the technology center"
+      },
+      {
+        "subject": "We",
+        "present": "speak Chinese in the study room",
+        "past": "spoke with the guide at the museum entrance",
+        "future": "will speak Russian in the seminar room"
+      },
+      {
+        "subject": "They",
+        "present": "speak Quechua in the village square",
+        "past": "spoke with the musicians at the concert arena",
+        "future": "will speak Greek in the international forum"
+      }
+    ]
+  },
+  {
+    "base": "ask",
+    "spanish": "preguntar",
+    "image": "assets/images/ask.png",
+    "audio": "assets/audio/ask.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "ask questions in the classroom",
+        "past": "asked for directions at the station",
+        "future": "will ask for help in the library"
+      },
+      {
+        "subject": "You",
+        "present": "ask for advice in the office",
+        "past": "asked about the schedule at the airport",
+        "future": "will ask for permission in the principal's room"
+      },
+      {
+        "subject": "He",
+        "present": "asks his friend in the cafeteria",
+        "past": "asked for information at the museum",
+        "future": "will ask the coach in the stadium"
+      },
+      {
+        "subject": "She",
+        "present": "asks her teacher in the laboratory",
+        "past": "asked about the homework at the academy",
+        "future": "will ask for a ticket in the cinema lobby"
+      },
+      {
+        "subject": "It",
+        "present": "asks for commands in the robot center",
+        "past": "asked for data near the computer desk",
+        "future": "will ask for updates in the control station"
+      },
+      {
+        "subject": "We",
+        "present": "ask our parent in the dining room",
+        "past": "asked for maps at the tourist office",
+        "future": "will ask for recommendations in the hotel reception"
+      },
+      {
+        "subject": "They",
+        "present": "ask reporters in the press area",
+        "past": "asked for water at the campsite",
+        "future": "will ask for answers in the conference center"
+      }
+    ]
+  },
+  {
+    "base": "answer",
+    "spanish": "responder",
+    "image": "assets/images/answer.png",
+    "audio": "assets/audio/answer.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "answer questions in the classroom",
+        "past": "answered the teacher at the library",
+        "future": "will answer the email in the office"
+      },
+      {
+        "subject": "You",
+        "present": "answer calls in the hallway",
+        "past": "answered the manager at the company",
+        "future": "will answer the quiz in the computer room"
+      },
+      {
+        "subject": "He",
+        "present": "answers messages in the cafe",
+        "past": "answered the reporter at the stadium",
+        "future": "will answer the interview in the television studio"
+      },
+      {
+        "subject": "She",
+        "present": "answers exercises in the study room",
+        "past": "answered her mother at the supermarket",
+        "future": "will answer the survey in the conference hall"
+      },
+      {
+        "subject": "It",
+        "present": "answers commands in the robot laboratory",
+        "past": "answered signals near the antenna tower",
+        "future": "will answer requests in the data center"
+      },
+      {
+        "subject": "We",
+        "present": "answer our coach in the sports club",
+        "past": "answered the guide at the historical museum",
+        "future": "will answer the questions in the seminar hall"
+      },
+      {
+        "subject": "They",
+        "present": "answer visitors in the information booth",
+        "past": "answered the audience at the theater",
+        "future": "will answer the judge in the courthouse"
+      }
+    ]
+  },
+  {
+    "base": "learn",
+    "spanish": "aprender",
+    "image": "assets/images/learn.png",
+    "audio": "assets/audio/learn.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "learn English in the language school",
+        "past": "learned math at the tutoring center",
+        "future": "will learn science in the laboratory"
+      },
+      {
+        "subject": "You",
+        "present": "learn history in the classroom",
+        "past": "learned geography at the museum",
+        "future": "will learn biology in the university"
+      },
+      {
+        "subject": "He",
+        "present": "learns karate in the sports academy",
+        "past": "learned physics at the science fair",
+        "future": "will learn programming in the technology room"
+      },
+      {
+        "subject": "She",
+        "present": "learns painting in the art studio",
+        "past": "learned chemistry at the research center",
+        "future": "will learn photography in the media classroom"
+      },
+      {
+        "subject": "It",
+        "present": "learns commands in the robot lab",
+        "past": "learned patterns near the control screen",
+        "future": "will learn movements in the innovation center"
+      },
+      {
+        "subject": "We",
+        "present": "learn music in the rehearsal room",
+        "past": "learned literature at the public library",
+        "future": "will learn astronomy in the observatory"
+      },
+      {
+        "subject": "They",
+        "present": "learn languages in the international institute",
+        "past": "learned architecture at the exhibition hall",
+        "future": "will learn engineering in the technical college"
+      }
+    ]
+  },
+  {
+    "base": "teach",
+    "spanish": "enseñar",
+    "image": "assets/images/teach.png",
+    "audio": "assets/audio/teach.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "teach English in the classroom",
+        "past": "taught grammar at the tutoring center",
+        "future": "will teach science in the laboratory"
+      },
+      {
+        "subject": "You",
+        "present": "teach music in the rehearsal hall",
+        "past": "taught art at the community center",
+        "future": "will teach history in the academy"
+      },
+      {
+        "subject": "He",
+        "present": "teaches soccer in the sports field",
+        "past": "taught mathematics at the college",
+        "future": "will teach biology in the research room"
+      },
+      {
+        "subject": "She",
+        "present": "teaches dance in the ballet studio",
+        "past": "taught chemistry at the science camp",
+        "future": "will teach literature in the reading club"
+      },
+      {
+        "subject": "It",
+        "present": "teaches commands in the robot workshop",
+        "past": "taught movements near the practice area",
+        "future": "will teach skills in the innovation lab"
+      },
+      {
+        "subject": "We",
+        "present": "teach children in the daycare center",
+        "past": "taught painting at the art museum",
+        "future": "will teach physics in the engineering building"
+      },
+      {
+        "subject": "They",
+        "present": "teach languages in the cultural institute",
+        "past": "taught technology at the training camp",
+        "future": "will teach astronomy in the planetarium"
+      }
+    ]
+  },
+  {
+    "base": "practice",
+    "spanish": "practicar",
+    "image": "assets/images/practice.png",
+    "audio": "assets/audio/practice.mp3",
+    "sentences": [
+      {
+        "subject": "I",
+        "present": "practice piano in the music room",
+        "past": "practiced basketball at the sports court",
+        "future": "will practice yoga in the fitness studio"
+      },
+      {
+        "subject": "You",
+        "present": "practice drawing in the art classroom",
+        "past": "practiced swimming at the water park",
+        "future": "will practice karate in the dojo"
+      },
+      {
+        "subject": "He",
+        "present": "practices guitar in the garage",
+        "past": "practiced baseball at the training field",
+        "future": "will practice photography in the media lab"
+      },
+      {
+        "subject": "She",
+        "present": "practices ballet in the dance studio",
+        "past": "practiced volleyball at the beach court",
+        "future": "will practice painting in the creative center"
+      },
+      {
+        "subject": "It",
+        "present": "practices movements in the robot arena",
+        "past": "practiced signals near the control machine",
+        "future": "will practice tasks in the automation room"
+      },
+      {
+        "subject": "We",
+        "present": "practice singing in the choir hall",
+        "past": "practiced football at the school stadium",
+        "future": "will practice acting in the drama theater"
+      },
+      {
+        "subject": "They",
+        "present": "practice martial arts in the gym center",
+        "past": "practiced running at the athletic track",
+        "future": "will practice chess in the strategy room"
+      }
+    ]
   }
 ]
