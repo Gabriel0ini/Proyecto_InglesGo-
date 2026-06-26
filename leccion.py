@@ -27,10 +27,10 @@ class Leccion:
             grupos.setdefault(u, []).append(p)
 
         meta = {
-            1: ("Los verbos",  "Aprende verbos en presente, pasado y futuro"),
-            2: ("Saludos",     "Aprende a decir Hello, Goodbye y más"),
-            3: ("Colores",     "Identifica los colores en inglés"),
-            4: ("Acciones",    "Verbos de acción cotidiana"),
+            1: ("The verbs",  "Learn verbs in the present, past, and future tenses"),
+            2: ("Saludos",     "Learn to say Hello, Goodbye and more"),
+            3: ("Colores",     "Identify the colors in English"),
+            4: ("Acciones",    "Verbs of everyday action"),
         }
 
         lecciones = []

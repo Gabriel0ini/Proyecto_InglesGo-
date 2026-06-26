@@ -93,5 +93,41 @@
         "dominado": false
       }
     }
+  },
+  "2": {
+    "puntaje": 70,
+    "ejercicios_completados": 7,
+    "verbos": {
+      "run": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "teach": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "practice": {
+        "correcto": 2,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "read": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "sing": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      },
+      "answer": {
+        "correcto": 1,
+        "incorrecto": 0,
+        "dominado": false
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 from tkinter import messagebox
+import pygame
 import tkinter as tk
 from PIL import Image, ImageTk
 from pathlib import Path
@@ -330,12 +331,14 @@ class InglesGoApp(tk.Tk):
                 tk.Label(parent, text="[imagen]", font=("Arial", 12), fg=GRAY, bg="white").pack(side="left")
 
     def _reproducir_audio(self, palabra: Palabra):
+        path = BASE_DIR / palabra.audio_url
         try:
-            import pyttsx3
-            engine = pyttsx3.init()
-            engine.setProperty('rate', 150)
-            engine.say(palabra.infinitivo)
-            engine.runAndWait()
+            if not path.exists():
+                messagebox.showwarning("Audio", f"Audio file not found:\n{path}")
+                return
+            pygame.mixer.init()
+            pygame.mixer.music.load(str(path))
+            pygame.mixer.music.play()
         except Exception as e:
             messagebox.showinfo("Audio", f"Could not play audio:\n{e}")
 
